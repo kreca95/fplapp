@@ -1,10 +1,11 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
-using FplApp.Models.Models;
 
-namespace FplApp.Models
+using System.Collections.Generic;
+
+namespace FplApp.Models.Models
 {
 
-    public class FPLResponse
+    public class FplFullInfoResponse
     {
         public List<Event> Events { get; set; }
         public GameSettings GameSettings { get; set; }

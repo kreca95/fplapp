@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
 
 namespace FplApp.Models.Models
 {

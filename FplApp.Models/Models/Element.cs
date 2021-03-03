@@ -1,12 +1,11 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
-using System;
 
 namespace FplApp.Models.Models
 {
     public class Element
     {
-        public int ChanceOfPlayingNextRound { get; set; }
-        public int ChanceOfPlayingThisRound { get; set; }
+        public int? ChanceOfPlayingNextRound { get; set; }
+        public int? ChanceOfPlayingThisRound { get; set; }
         public int Code { get; set; }
         public int CostChangeEvent { get; set; }
         public int CostChangeEventFall { get; set; }
@@ -22,7 +21,7 @@ namespace FplApp.Models.Models
         public int Id { get; set; }
         public bool InDreamteam { get; set; }
         public string News { get; set; }
-        public DateTime NewsAdded { get; set; }
+        public DateTime? NewsAdded { get; set; }
         public int NowCost { get; set; }
         public string Photo { get; set; }
         public string PointsPerGame { get; set; }
@@ -66,11 +65,11 @@ namespace FplApp.Models.Models
         public int ThreatRankType { get; set; }
         public int IctIndexRank { get; set; }
         public int IctIndexRankType { get; set; }
-        public int CornersAndIndirectFreekicksOrder { get; set; }
+        public int? CornersAndIndirectFreekicksOrder { get; set; }
         public string CornersAndIndirectFreekicksText { get; set; }
-        public int DirectFreekicksOrder { get; set; }
+        public int? DirectFreekicksOrder { get; set; }
         public string DirectFreekicksText { get; set; }
-        public int PenaltiesOrder { get; set; }
+        public int? PenaltiesOrder { get; set; }
         public string PenaltiesText { get; set; }
     }
 }
