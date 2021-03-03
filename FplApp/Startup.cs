@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using FplApp.DataImporter;
 using FplApp.EfCoreDbCommunication;
+using FplApp.EfCoreDbCommunication.Implementations;
+using FplApp.EfCoreDbCommunication.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,7 +34,7 @@ namespace FplApp
 
             services.AddDbContext<FplAppDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("FplAppDbContext")));
-
+            services.AddScoped<IElementService, ElementService>();
             services.AddControllers();
             services.AddSingleton<Worker>();
             services.AddSwaggerGen(c =>
