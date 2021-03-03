@@ -1,9 +1,12 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
 
+using System.Collections.Generic;
+
 namespace FplApp.Models.Models
 {
     public class GameSettings
     {
+        public int Id { get; set; }
         public int LeagueJoinPrivateMax { get; set; }
         public int LeagueJoinPublicMax { get; set; }
         public int LeagueMaxSizePublicClassic { get; set; }
@@ -25,7 +28,8 @@ namespace FplApp.Models.Models
         public int SquadTotalSpend { get; set; }
         public int UiCurrencyMultiplier { get; set; }
         public bool UiUseSpecialShirts { get; set; }
-        public List<object> UiSpecialShirtExclusions { get; set; }
+        //na apiju prazna lista
+        //public List<object> UiSpecialShirtExclusions { get; set; }
         public int StatsFormDays { get; set; }
         public bool SysViceCaptainEnabled { get; set; }
         public int TransfersCap { get; set; }

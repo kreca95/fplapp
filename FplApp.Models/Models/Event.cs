@@ -1,5 +1,8 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
 
+using System;
+using System.Collections.Generic;
+
 namespace FplApp.Models.Models
 {
     public class Event
@@ -17,7 +20,6 @@ namespace FplApp.Models.Models
         public bool IsPrevious { get; set; }
         public bool IsCurrent { get; set; }
         public bool IsNext { get; set; }
-        public List<ChipPlay> ChipPlays { get; set; }
         public int? MostSelected { get; set; }
         public int? MostTransferredIn { get; set; }
         public int? TopElement { get; set; }

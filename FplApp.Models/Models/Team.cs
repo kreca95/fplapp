@@ -6,7 +6,8 @@ namespace FplApp.Models.Models
     {
         public int Code { get; set; }
         public int Draw { get; set; }
-        public object Form { get; set; }
+        //null na apiju
+        // public object Form { get; set; }
         public int Id { get; set; }
         public int Loss { get; set; }
         public string Name { get; set; }
@@ -15,7 +16,8 @@ namespace FplApp.Models.Models
         public int Position { get; set; }
         public string ShortName { get; set; }
         public int Strength { get; set; }
-        public object TeamDivision { get; set; }
+        //null na apiju
+        //public object TeamDivision { get; set; }
         public bool Unavailable { get; set; }
         public int Win { get; set; }
         public int StrengthOverallHome { get; set; }

@@ -1,5 +1,7 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
 
+using System.Collections.Generic;
+
 namespace FplApp.Models.Models
 {
     public class ElementType

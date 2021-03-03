@@ -1,5 +1,7 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
 
+using System;
+
 namespace FplApp.Models.Models
 {
     public class Element
@@ -28,7 +30,7 @@ namespace FplApp.Models.Models
         public string SecondName { get; set; }
         public string SelectedByPercent { get; set; }
         public bool Special { get; set; }
-        public object SquadNumber { get; set; }
+        public string SquadNumber { get; set; }
         public string Status { get; set; }
         public int Team { get; set; }
         public int TeamCode { get; set; }
