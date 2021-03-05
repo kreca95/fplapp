@@ -36,7 +36,6 @@ namespace FplApp
                 options.UseNpgsql(Configuration.GetConnectionString("FplAppDbContext")));
             services.AddScoped<IElementService, ElementService>();
             services.AddControllers();
-            services.AddSingleton<Worker>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FplApp", Version = "v1" });
