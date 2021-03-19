@@ -17,4 +17,8 @@
     <ProjectReference Include="..\FplApp.EfCoreDbCommunication\FplApp.EfCoreDbCommunication.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

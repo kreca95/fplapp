@@ -1,4 +1,5 @@
-﻿using FplApp.Models.Models;
+﻿using FplApp.Models;
+using FplApp.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace FplApp.EfCoreDbCommunication.Interfaces
 {
     public interface IElementService
     {
-        List<Element> GetElements();
-        bool InsertElement(List<Element> elements);
+        List<Element> GetElements(GetElementsRequest request);
+        bool InsertElements(List<Element> elements);
     }
 }

@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace FplApp.DataImporter.Implementations
 {
-    public class ElementService : IElementService
+    public class ElementImporterService : IElementImporterService
     {
         private readonly IMapper mapper;
-        private readonly ILogger logger;
 
-        public ElementService(IMapper mapper, ILogger logger)
+        public ElementImporterService(IMapper mapper)
         {
             this.mapper = mapper;
-            this.logger = logger;
         }
 
         public async Task<List<Element>> GetElementsAsync()
@@ -34,7 +32,6 @@ namespace FplApp.DataImporter.Implementations
             }
             catch (System.Exception e)
             {
-                logger.LogInformation(e.Message);
                 throw;
             }
         }

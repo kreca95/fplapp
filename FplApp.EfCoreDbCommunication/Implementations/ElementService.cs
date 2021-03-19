@@ -1,4 +1,5 @@
 ﻿using FplApp.EfCoreDbCommunication.Interfaces;
+using FplApp.Models;
 using FplApp.Models.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -17,15 +18,24 @@ namespace FplApp.EfCoreDbCommunication.Implementations
         {
             this.dbContext = dbContext;
         }
-        public List<Element> GetElements()
+        public List<Element> GetElements(GetElementsRequest request)
         {
-            var elements = dbContext.Elements.ToList();
+            List<Element> elements = new List<Element>();
+            elements = dbContext.Elements.ToList();
+            if (request.PlayerId != 0)
+            {
+                elements = dbContext.Elements.Where(x => x.Id == request.PlayerId).ToList();
+            }
+            if (request.TeamId != 0)
+            {
+                elements = dbContext.Elements.Where(x => x.Team == request.TeamId).ToList();
+            }
             return elements;
         }
 
-        public bool InsertElement(List<Element> elements)
+        public bool InsertElements(List<Element> elements)
         {
-            dbContext.Elements.AddRange(elements);
+            dbContext.Elements.UpdateRange(elements);
             var check = dbContext.SaveChanges();
             return check > 0;
         }
