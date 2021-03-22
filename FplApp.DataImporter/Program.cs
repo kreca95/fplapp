@@ -30,7 +30,7 @@ namespace FplApp.DataImporter
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices(services =>
                 {
-                    services.AddHostedService<ElementDataWorker>();
+                    //services.AddHostedService<ElementDataWorker>();
                     services.AddHostedService<ImportAllFplDataWorker>();
 
                     services.AddAutoMapper(typeof(Program));
