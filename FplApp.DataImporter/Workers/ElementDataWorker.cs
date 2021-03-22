@@ -27,10 +27,10 @@ namespace FplApp.DataImporter.Workers
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            logger.InfoFormat("ElementDataWorker initialized at: {0}", DateTime.Now);
+            logger.InfoFormat("ElementDataWorker initialized");
             while (!stoppingToken.IsCancellationRequested)
             {
-                logger.InfoFormat("Calling GetElements at: {0}", DateTime.Now);
+                logger.InfoFormat("Calling GetElements ");
 
                 var elements = await _elementService.GetElementsAsync();
                 //insert preko http
@@ -38,7 +38,7 @@ namespace FplApp.DataImporter.Workers
                 var uri = _config.GetSection("fplappapi").Value;
                 HttpHelper.Post(uri, elementsJson, "", "");
 
-                logger.InfoFormat("ElementDataWorker finished at: {0}", DateTime.Now);
+                logger.InfoFormat("ElementDataWorker finished");
 
                 await Task.Delay(1000 * 5, stoppingToken);
             }

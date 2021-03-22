@@ -27,14 +27,14 @@ namespace FplApp.DataImporter.Workers
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            logger.InfoFormat("Starting ImportAllFplDataWorker at {0}", DateTime.Now);
+            logger.InfoFormat("Starting ImportAllFplDataWorker");
             while (!stoppingToken.IsCancellationRequested)
             {
-                logger.InfoFormat("ImportAllFplDataWorker at {0}", DateTime.Now);
+                logger.InfoFormat("ImportAllFplDataWorker while loop");
 
                 var data = _importerService.GetData(null);
 
-                logger.InfoFormat("ImportAllFplDataWorker finished ad {0}", DateTime.Now);
+                logger.InfoFormat("ImportAllFplDataWorker finished ");
 
                 Thread.Sleep(1000 * 5);
             }
