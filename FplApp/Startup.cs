@@ -35,6 +35,7 @@ namespace FplApp
             services.AddDbContext<FplAppDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("FplAppDbContext")));
             services.AddScoped<IElementService, ElementService>();
+            services.AddScoped<IPhaseService, PhaseService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

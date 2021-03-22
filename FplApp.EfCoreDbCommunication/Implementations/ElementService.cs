@@ -78,14 +78,14 @@ namespace FplApp.EfCoreDbCommunication.Implementations
 
         public bool InsertElementStat(List<ElementStat> elementStats)
         {
-            _dbContext.ElementStats.AddRange(elementStats);
+            _dbContext.ElementStats.UpdateRange(elementStats);
             var count = _dbContext.SaveChanges();
             return count > 0;
         }
 
         public bool InsertElementType(List<ElementType> elementTypes)
         {
-            _dbContext.ElementTypes.AddRange(elementTypes);
+            _dbContext.ElementTypes.UpdateRange(elementTypes);
             var count = _dbContext.SaveChanges();
             return count > 0;
         }
